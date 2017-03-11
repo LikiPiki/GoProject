@@ -1,0 +1,25 @@
+<br>
+<div class="jumbotron">
+    {{ if .User.IsAnonimous}}
+        <h2>Hello, men, pleaze register or login </h2>
+    {{else}}
+        <h2>Hello {{ .User.Username }} </h2>
+    {{ end}}
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aut beatae commodi debitis dicta dolores eum eveniet in iste nam nulla, qui quos rerum, sequi similique tempore? Debitis, qui.</p>
+</div>
+
+<br>
+{{ range .Items}}
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="{{.Image}}" alt="{{.Desc}}">
+                <div class="caption">
+                    <h3>{{.Name}}</h3>
+                    <p>{{ .Desc }}</p>
+                    <p><a href="/showitem/{{.Id}}" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-danger" role="button">{{ .Cost}} <span class="badge">P</span> </a></p>
+                </div>
+            </div>
+        </div>
+{{end}}
+</div>

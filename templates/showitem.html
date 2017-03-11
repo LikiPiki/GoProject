@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <h2>{{.Item.Name}}</h2>
+    <img src="{{.Item.Image}}" width="500" alt="{{.Item.Desc}}">
+    <p>{{.Item.Desc}}</p>
+    <div class="btn btn-danger">Купить: <span class="badge">{{.Item.Cost}}P</span></div>
+    <a href="/"><div class="btn btn-success">Home</div></a>
+</div>
+
+<br>
+<div class="jumbotron">
+    <h2>Comments</h2>
+    {{ range .Item.UserComments }}
+    <p><strong>{{ .Username }}:</strong> {{ .Comment }}</p>
+    {{ end }}
+    {{ if not .User.IsAnonimous }}
+    <h4>Enter a comment</h4>
+    <form action="" method="post">
+        <input type="text" id="comment" name="comment" class="form-control">
+        <br>
+        <input type="Submit" value="Add comment" class="btn btn-primary">
+    </form>
+    {{ end }}
+</div>

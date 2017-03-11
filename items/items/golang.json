@@ -1,0 +1,13 @@
+{
+	"Name": "Golang",
+	"Desc": "golang",
+	"Id": "golang",
+	"Cost": 10,
+	"Image": "http://www.unixstickers.com/image/cache/data/stickers/golang/golang.sh-600x600.png",
+	"UserComments": [
+		{
+			"Username": "admin",
+			"Comment": "Очень крутой гофер"
+		}
+	]
+}
